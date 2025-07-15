@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import './blogDetail.css.css'; // 👈 import the CSS
+import './blogDetail.css.css'; 
 
 export default function BlogDetails({ params }) {
   const [blog, setBlog] = useState(null);

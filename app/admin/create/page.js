@@ -21,7 +21,7 @@ export default function CreateBlog() {
   id: Date.now().toString(),
   title,
   content,
-  image, // ⬅️ we added this line
+  image,
   author: 'Admin',
   date: new Date().toISOString().split('T')[0]
 };

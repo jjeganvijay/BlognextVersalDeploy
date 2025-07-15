@@ -8,7 +8,7 @@ export default function AdminDashboard() {
   const [blogs, setBlogs] = useState([]);
   const router = useRouter();
 
-  // Protect admin route
+
   useEffect(() => {
     const auth = localStorage.getItem('admin-auth');
     if (!auth) {

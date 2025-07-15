@@ -11,13 +11,13 @@ export default function BlogList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Only runs on client because of 'use client'
+    
     const isLoggedIn = localStorage.getItem('user-auth');
     console.log('🔐 Is user logged in?', isLoggedIn);
 
     if (!isLoggedIn || isLoggedIn !== 'true') {
       console.log('⛔ Not logged in. Redirecting...');
-      router.replace('/login'); // Use replace to avoid going back
+      router.replace('/login'); 
       return;
     }
 

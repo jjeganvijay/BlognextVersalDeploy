@@ -34,7 +34,9 @@ export default function BlogDetails({ params }) {
       </p>
       {blog.image && (
         <img
-          src={blog.image}
+          src={blog.image
+            
+          }
           alt={blog.title}
           className="blog-image"
         />

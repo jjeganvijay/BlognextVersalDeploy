@@ -1,0 +1,98 @@
+.admin-dashboard {
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-dashboard h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #1e293b;
+  text-align: center;
+  font-weight: 600;
+}
+
+.create-button {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.create-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.blog-list {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-card {
+  background-color: #f8fafc;
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: scale(1.01);
+}
+
+.blog-card h2 {
+  margin-bottom: 0.6rem;
+  color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.blog-card p {
+  margin: 0.3rem 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.admin-actions {
+  margin-top: 1.5rem;
+}
+
+.edit-button,
+.delete-button {
+  padding: 0.55rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-button {
+  background-color: #10b981;
+  color: white;
+  margin-right: 0.75rem;
+}
+
+.edit-button:hover {
+  background-color: #059669;
+}
+
+.delete-button {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+}

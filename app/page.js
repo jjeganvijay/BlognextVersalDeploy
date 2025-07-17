@@ -24,9 +24,7 @@ export default function Home() {
         <section className={styles.hero}>
           <h1 className={styles.heroTitle}>Welcome to Bloging World ✨</h1>
           <p className={styles.heroSubtitle}>
-            Share your ideas, post your thoughts, or manage your blog as an admin.
-                           <br></br><strong>Try our demo to see how it works.</strong>
-          </p>
+            Share your ideas, post your thoughts, or manage your blog as an admin.</p>
           <div className={styles.buttonGroup}>
             <Link href="/login" className={styles.button}>Login as User</Link>
             <Link href="/adminlogin" className={styles.buttonAlt}>Login as Admin</Link>

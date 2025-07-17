@@ -11,7 +11,7 @@ export default function Home() {
       <header className={styles.navbar}>
         <div className={styles.logoContainer}>
           <Image src={logo} width={48} height={48} alt="Logo" priority />
-          <span className={styles.title}>My Grand Blog</span>
+          <span className={styles.title}>Bloging World</span>
         </div>
         <nav className={styles.navLinks}>
           <Link href="/blog" className={styles.link}>Try Demo</Link>
@@ -22,9 +22,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <section className={styles.hero}>
-          <h1 className={styles.heroTitle}>Welcome to My Grand Blog ✨</h1>
+          <h1 className={styles.heroTitle}>Welcome to Bloging World ✨</h1>
           <p className={styles.heroSubtitle}>
             Share your ideas, post your thoughts, or manage your blog as an admin.
+                           <br></br><strong>Try our demo to see how it works.</strong>
           </p>
           <div className={styles.buttonGroup}>
             <Link href="/login" className={styles.button}>Login as User</Link>

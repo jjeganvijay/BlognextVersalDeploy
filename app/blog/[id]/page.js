@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import './blogDetail.css.css'; 
+import './blogDetail.css'; 
 
 export default function BlogDetails({ params }) {
   const [blog, setBlog] = useState(null);
@@ -11,17 +11,20 @@ export default function BlogDetails({ params }) {
   useEffect(() => {
     const auth = localStorage.getItem('user-auth');
     if (!auth) {
-      router.push('/blog/login');
+      router.push('/login');
       return;
     }
 
-    const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
-    const found = blogs.find(b => b.id === params.id);
-    if (found) {
-      setBlog(found);
-    } else {
-      router.push('/not-found');
-    }
+    fetch('/api/blogs')
+      .then(res => res.json())
+      .then(data => {
+        const found = data.find(b => b.id === params.id);
+        if (found) {
+          setBlog(found);
+        } else {
+          router.push('/not-found');
+        }
+      });
   }, [params.id]);
 
   if (!blog) return <p className="blog-detail-container">Loading blog...</p>;
@@ -33,13 +36,7 @@ export default function BlogDetails({ params }) {
         <strong>By:</strong> {blog.author} | <strong>Date:</strong> {blog.date}
       </p>
       {blog.image && (
-        <img
-          src={blog.image
-            
-          }
-          alt={blog.title}
-          className="blog-image"
-        />
+        <img src={blog.image} alt={blog.title} className="blog-image" />
       )}
       <p className="blog-content">{blog.content}</p>
     </div>

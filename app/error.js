@@ -7,3 +7,4 @@ const error=()=>{
     )
 }
 export default error;
+//how we can fetch apis in diff ways

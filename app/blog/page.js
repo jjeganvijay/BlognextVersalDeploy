@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import './blog-list.css';
+import Image from 'next/image';
+import styles from './blog-list.module.css';
 
 export default function BlogList() {
   const router = useRouter();
@@ -11,19 +12,18 @@ export default function BlogList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    
     const isLoggedIn = localStorage.getItem('user-auth');
-    console.log('🔐 Is user logged in?', isLoggedIn);
-
     if (!isLoggedIn || isLoggedIn !== 'true') {
-      console.log('⛔ Not logged in. Redirecting...');
-      router.replace('/login'); 
+      router.replace('/login');
       return;
     }
 
-    const blogData = JSON.parse(localStorage.getItem('blogs')) || [];
-    setBlogs(blogData);
-    setLoading(false);
+    fetch('/api/blogs')
+      .then((res) => res.json())
+      .then((data) => {
+        setBlogs(data);
+        setLoading(false);
+      });
   }, [router]);
 
   if (loading) {
@@ -31,32 +31,35 @@ export default function BlogList() {
   }
 
   return (
-    <div className="blog-list-container">
-      <h1>📝 All Blogs</h1>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>📝 All Blogs</h1>
       {blogs.length === 0 ? (
-        <p className="no-blogs">No blogs found.</p>
+        <p className={styles.noBlogs}>No blogs found. Create your first one!</p>
       ) : (
-        blogs.map((blog) => (
-          <div className="blog-card" key={blog.id}>
-            {blog.image && (
-              <img
-                src={blog.image}
-                alt={blog.title}
-                style={{
-                  width: '100%',
-                  maxHeight: '300px',
-                  objectFit: 'cover',
-                  borderRadius: '10px',
-                  marginBottom: '1rem'
-                }}
-              />
-            )}
-            <h2>
-              <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
-            </h2>
-            <p>By {blog.author} on {blog.date}</p>
-          </div>
-        ))
+        <div className={styles.blogGrid}>
+          {blogs.map((blog) => (
+            <div className={styles.blogCard} key={blog.id}>
+              {blog.image && (
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={blog.image}
+                    alt={blog.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+              )}
+              <div className={styles.cardContent}>
+                <Link href={`/blog/${blog.id}`} className={styles.blogTitle}>
+                  {blog.title}
+                </Link>
+                <p className={styles.blogMeta}>
+                  By {blog.author} on {blog.date}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );

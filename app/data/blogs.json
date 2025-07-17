@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "title": "Understanding React Hooks",
+    "author": "Jane Doe",
+    "date": "2025-07-15",
+    "image": "/blog1.jpg",
+    "content": "React Hooks simplify state and side effects in functional components."
+  },
+  {
+    "id": "2",
+    "title": "Next.js vs React: What’s the Difference?",
+    "author": "Vijay",
+    "date": "2025-07-16",
+    "image": "/blog2.jpg",
+    "content": "While React is a library, Next.js is a full-stack framework built on top of React."
+  },
+  {
+    "id": "3",
+    "title": "Deploying to Vercel Made Easy",
+    "author": "Team SECE",
+    "date": "2025-07-17",
+    "image": "/blog3.jpg",
+    "content": "Vercel allows seamless deployment for frontend frameworks like Next.js."
+  },
+  {
+    "id": "4",
+    "title": "Fullstack Roadmap for Beginners",
+    "author": "Ankit Sharma",
+    "date": "2025-07-14",
+    "image": "/blog4.jpg",
+    "content": "Start with HTML, CSS, JavaScript, then move to React, Node.js, and databases."
+  },
+  {
+    "id": "5",
+    "title": "Top 5 VSCode Extensions for Developers",
+    "author": "Priya Verma",
+    "date": "2025-07-13",
+    "image": "/blog5.jpg",
+    "content": "Extensions like Prettier, GitLens, and ESLint boost productivity."
+  },
+  {
+    "id": "6",
+    "title": "Intro to REST APIs with Node.js",
+    "author": "Rahul K",
+    "date": "2025-07-12",
+    "image": "/blog6.jpg",
+    "content": "REST APIs let frontend and backend communicate easily with HTTP methods."
+  },
+  {
+    "id": "7",
+    "title": "CSS Grid vs Flexbox",
+    "author": "Meera S",
+    "date": "2025-07-11",
+    "image": "/blog7.jpg",
+    "content": "Learn when to use CSS Grid for layout and Flexbox for alignment."
+  },
+  {
+    "id": "8",
+    "title": "Why Learn Git and GitHub Early",
+    "author": "Anand R",
+    "date": "2025-07-10",
+    "image": "/blog8.jpg",
+    "content": "Version control with Git is essential for collaborating in real-world projects."
+  },
+  {
+    "id": "9",
+    "title": "JavaScript ES6 Features You Should Know",
+    "author": "Sneha P",
+    "date": "2025-07-09",
+    "image": "/blog9.jpg",
+    "content": "Let, const, arrow functions, spread/rest — ES6 made JS cleaner and better."
+  },
+  {
+    "id": "10",
+    "title": "Firebase for Beginners",
+    "author": "Raj M",
+    "date": "2025-07-08",
+    "image": "/blog10.jpg",
+    "content": "Firebase offers auth, database, and hosting services for quick app dev."
+  },
+  {
+    "id": "11",
+    "title": "Top 3 UI Libraries for React",
+    "author": "Swathi G",
+    "date": "2025-07-07",
+    "image": "/blog11.jpg",
+    "content": "Material UI, Chakra UI, and Ant Design provide styled components for speed."
+  },
+  {
+    "id": "12",
+    "title": "Beginner Tips for Competitive Programming",
+    "author": "Yashwanth",
+    "date": "2025-07-06",
+    "image": "/blog12.jpg",
+    "content": "Learn to think in patterns, use C++ STL or Python tricks to solve faster."
+  }
+]

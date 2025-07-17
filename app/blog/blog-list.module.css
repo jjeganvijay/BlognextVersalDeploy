@@ -1,0 +1,74 @@
+.container {
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  background: linear-gradient(to bottom, #eef2ff, #ffffff);
+  font-family: system-ui, sans-serif;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.noBlogs {
+  text-align: center;
+  color: #475569;
+  font-size: 1.1rem;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blogCard {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+
+.cardContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blogTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.blogTitle:hover {
+  text-decoration: underline;
+}
+
+.blogMeta {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: auto;
+}

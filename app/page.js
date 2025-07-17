@@ -14,7 +14,7 @@ export default function Home() {
           <span className={styles.title}>Bloging World</span>
         </div>
         <nav className={styles.navLinks}>
-          <Link href="/blog" className={styles.link}>Try Demo</Link>
+          
           <Link href="/login" className={styles.link}>User Login</Link>
           <Link href="/adminlogin" className={styles.link}>Admin Login</Link>
         </nav>

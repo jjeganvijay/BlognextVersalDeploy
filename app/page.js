@@ -14,7 +14,7 @@ export default function Home() {
           <span className={styles.title}>Bloging World</span>
         </div>
         <nav className={styles.navLinks}>
-          
+          <Link href="/blog" className={styles.link}>Try Demo</Link>
           <Link href="/login" className={styles.link}>User Login</Link>
           <Link href="/adminlogin" className={styles.link}>Admin Login</Link>
         </nav>
@@ -24,7 +24,8 @@ export default function Home() {
         <section className={styles.hero}>
           <h1 className={styles.heroTitle}>Welcome to Bloging World ✨</h1>
           <p className={styles.heroSubtitle}>
-            Share your ideas, post your thoughts, or manage your blog as an admin.</p>
+            Share your ideas, post your thoughts, or manage your blog as an admin.
+            <br></br><strong>Try the Demo</strong></p>
           <div className={styles.buttonGroup}>
             <Link href="/login" className={styles.button}>Login as User</Link>
             <Link href="/adminlogin" className={styles.buttonAlt}>Login as Admin</Link>
@@ -33,7 +34,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>© {new Date().getFullYear()} My Grand Blog. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} My Bloging World. All rights reserved.</p>
       </footer>
     </div>
   );
